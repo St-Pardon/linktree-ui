@@ -4,12 +4,15 @@ export const FooterContainer = styled.footer`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 `;
 
 export const Zuri = styled.h3`
   font-size: 1.5rem;
   color: #000000;
   font-weight: 700;
+  display: flex;
+  gap: 5px;
 `;
 
 export const Hng = styled.h3`
@@ -21,10 +24,9 @@ export const Hng = styled.h3`
 `;
 
 export const IngressLogo = styled.img`
-  width: 132px;`
-;
+  width: 132px;`;
 
 export const Bull = styled.span`
   color: #ff0000;
-
+  align-self: flex-end;
 `;
