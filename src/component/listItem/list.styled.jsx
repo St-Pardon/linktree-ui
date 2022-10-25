@@ -18,4 +18,5 @@ export const List = styled.p`
 export const Anchor = styled.a`
   text-decoration: none;
   color: unset;
+  cursor: pointer;
 `;

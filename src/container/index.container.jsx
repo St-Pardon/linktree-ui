@@ -9,7 +9,7 @@ const LandingPage = () => {
       <Section></Section>
       <Section>
         {apidata.map((item, i) => (
-          <ListItems key={i} desc={item.desc} name={item.name} id={item.id} />
+          <ListItems key={i} dest={item.dest} name={item.name} id={item.id} />
         ))}
       </Section>
     </Main>
