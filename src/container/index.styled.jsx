@@ -15,3 +15,22 @@ export const Section = styled.section`
   flex-direction: column;
   gap: 24px
 `;
+
+export const TwitterName = styled.h1`
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #101828;
+  text-align: center;
+`;
+export const SlackName = styled.h3`
+  display: none;
+`;
+export const Avi = styled.img`
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+`;
+
