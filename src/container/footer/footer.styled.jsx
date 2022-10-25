@@ -5,6 +5,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 20px 0;
 `;
 
 export const Zuri = styled.h3`
