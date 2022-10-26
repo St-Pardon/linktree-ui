@@ -1,6 +1,5 @@
 import React from 'react';
 import { Bull, FooterContainer, Hng, IngressLogo, Zuri } from './footer.styled';
-import svg from '../../assets/zuri.svg';
 
 const Footer = () => {
   return (
