@@ -1,5 +1,6 @@
 import React from 'react';
 import { RiShareForwardLine } from 'react-icons/ri';
+import { IoIosMore } from 'react-icons/io';
 import ListItems from '../component/listItem/list';
 import {
   Avi,
@@ -8,6 +9,8 @@ import {
   SlackName,
   Share,
   TwitterName,
+  Tooltip,
+  Icon,
 } from './index.styled';
 import { apidata } from '../assets/apidata';
 
@@ -15,7 +18,13 @@ const LandingPage = () => {
   return (
     <Main>
       <Share>
-        <RiShareForwardLine />
+        <Icon $mode='share'>
+          <RiShareForwardLine />
+        </Icon>
+        <Icon $mode="more">
+          <IoIosMore />
+        </Icon>
+        <Tooltip>Share Link</Tooltip>
       </Share>
       <Section>
         <Avi
