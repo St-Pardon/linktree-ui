@@ -13,12 +13,13 @@ import {
   Icon,
 } from './index.styled';
 import { apidata } from '../assets/apidata';
+import { MdOutlinePhotoCamera } from 'react-icons/md';
 
 const LandingPage = () => {
   return (
     <Main>
       <Share>
-        <Icon $mode='share'>
+        <Icon $mode="share">
           <RiShareForwardLine />
         </Icon>
         <Icon $mode="more">
@@ -27,10 +28,11 @@ const LandingPage = () => {
         <Tooltip>Share Link</Tooltip>
       </Share>
       <Section>
-        <Avi
-          id="profile_img"
-          src="https://images.nappy.co/uploads/large/20200905-doryus-4258-2001599358408fhrsfpc68vagsgynjlikyxocgmqxjlikvpdzftm5blnucjtvtljcckopnawo9dtpfhlhyjkazcjybwnal8dd8dijj5ocsvyyxhzn.jpg?auto=format&w=1280&q=75"
-        />
+        <Avi id="profile_img">
+          <Icon $mode="cam">
+            <MdOutlinePhotoCamera />
+          </Icon>
+        </Avi>
         <TwitterName id="twitter">Onyedikachi</TwitterName>
         <SlackName id="slack">Onyedikachi Onu</SlackName>
       </Section>

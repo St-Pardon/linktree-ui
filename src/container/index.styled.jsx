@@ -3,7 +3,7 @@ import { devices } from '../styles/breakpoints';
 
 export const Main = styled.main`
   max-width: 1100px;
-  width: 100%;
+  width: 90%;
   margin: 50px auto 100px auto;
   display: flex;
   flex-direction: column;
@@ -30,12 +30,105 @@ export const SlackName = styled.h3`
   display: none;
 `;
 
-export const Avi = styled.img`
+export const Icon = styled.span`
+${(props) => {
+  switch (props.$mode) {
+    case 'cam':
+      return css`
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: white;
+        font-size: 25px;
+      `;
+    default:
+      return css`
+        color: #98A2B3;
+        font-size: 26px;
+      `;
+  }
+}}
+
+  @media ${devices.mtablet} {
+    ${(props) => {
+      switch (props.$mode) {
+        case 'cam':
+      return css`
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: white;
+        font-size: 25px;
+      `;
+      case 'more':
+          return css`
+            display: none;
+          `;
+        default:
+          return css`
+            display: block;
+          `;
+      }
+    }}
+  }
+  @media ${devices.tablet} {
+    ${(props) => {
+      switch (props.$mode) {
+        case 'cam':
+      return css`
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: white;
+        font-size: 25px;
+      `;
+      case 'more':
+          return css`
+            display: block;
+          `;
+        default:
+          return css`
+            display: none;
+          `;
+      }
+    }}
+  }
+`;
+
+
+export const Avi = styled.div`
   width: 100px;
   height: 100px;
   display: block;
   margin: 0 auto;
   border-radius: 100%;
+  background-image: url('https://images.nappy.co/uploads/large/20200905-doryus-4258-2001599358408fhrsfpc68vagsgynjlikyxocgmqxjlikvpdzftm5blnucjtvtljcckopnawo9dtpfhlhyjkazcjybwnal8dd8dijj5ocsvyyxhzn.jpg?auto=format&w=1280&q=75');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(52, 64, 84, 0.75), rgba(52, 64, 84, 0.75)), url('https://images.nappy.co/uploads/large/20200905-doryus-4258-2001599358408fhrsfpc68vagsgynjlikyxocgmqxjlikvpdzftm5blnucjtvtljcckopnawo9dtpfhlhyjkazcjybwnal8dd8dijj5ocsvyyxhzn.jpg?auto=format&w=1280&q=75');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  &:hover ${Icon}{ 
+    display: inline;
+  }
+
+  &:focused {
+    border: 3px solid;
+  }
+
 `;
 
 export const Tooltip = styled.div`
@@ -83,37 +176,8 @@ export const Share = styled.div`
     background-color: #F9FAFB;
     color: #D0D5DD;
   }
-`;
 
-export const Icon = styled.span`
-  color: #98A2B3;
-  font-size: 26px;
-  @media ${devices.big} {
-    ${(props) => {
-      switch (props.$mode) {
-        case 'more':
-          return css`
-            display: none;
-          `;
-        default:
-          return css`
-            display: block;
-          `;
-      }
-    }}
-  }
-  @media ${devices.tablet} {
-    ${(props) => {
-      switch (props.$mode) {
-        case 'more':
-          return css`
-            display: block;
-          `;
-        default:
-          return css`
-            display: none;
-          `;
-      }
-    }}
+  @media ${devices.tablet}{
+    right: 0;
   }
 `;
