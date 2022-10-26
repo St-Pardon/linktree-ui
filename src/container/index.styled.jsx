@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  max-width: 800px;
+  max-width: 1100px;
   width: 100%;
   margin: 50px auto 100px auto;
   display: flex;
@@ -39,4 +39,15 @@ export const Avi = styled.img`
 
 export const Share = styled.div`
   position: absolute;
+  font-size: 26px;
+  right: 15%;
+  top: -30px;
+  border: 1px dotted #D0D5DD;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #98A2B3;
 `;
