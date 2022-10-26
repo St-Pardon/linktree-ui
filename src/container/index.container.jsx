@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RiShareForwardLine } from 'react-icons/ri';
 import { IoIosMore } from 'react-icons/io';
 import ListItems from '../component/listItem/list';
@@ -16,9 +16,17 @@ import { apidata } from '../assets/apidata';
 import { MdOutlinePhotoCamera } from 'react-icons/md';
 
 const LandingPage = () => {
+  const [avi, setAvi] = useState(false);
+  const [share, setShare] = useState(false);
+
   return (
     <Main>
-      <Share>
+      <Share
+        style={share ? { borderStyle: 'solid' } : {}}
+        onClick={() => {
+          setShare(!share);
+        }}
+      >
         <Icon $mode="share">
           <RiShareForwardLine />
         </Icon>
@@ -28,7 +36,13 @@ const LandingPage = () => {
         <Tooltip>Share Link</Tooltip>
       </Share>
       <Section>
-        <Avi id="profile_img">
+        <Avi
+          id="profile_img"
+          style={avi ? { border: '5px solid #EBE9FE' } : {}}
+          onClick={() => {
+            setAvi(!avi);
+          }}
+        >
           <Icon $mode="cam">
             <MdOutlinePhotoCamera />
           </Icon>

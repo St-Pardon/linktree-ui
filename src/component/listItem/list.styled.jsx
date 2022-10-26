@@ -13,6 +13,10 @@ export const List = styled.p`
   color: #101828;
   padding: 24px 0;
   width: 100%;
+
+  &:hover{
+    background-color: #D0D5DD;
+  }
 `;
 
 export const Anchor = styled.a`

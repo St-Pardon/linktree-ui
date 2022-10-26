@@ -107,6 +107,7 @@ export const Avi = styled.div`
   height: 100px;
   display: block;
   margin: 0 auto;
+  border: 5px solid white; 
   border-radius: 100%;
   background-image: url('https://images.nappy.co/uploads/large/20200905-doryus-4258-2001599358408fhrsfpc68vagsgynjlikyxocgmqxjlikvpdzftm5blnucjtvtljcckopnawo9dtpfhlhyjkazcjybwnal8dd8dijj5ocsvyyxhzn.jpg?auto=format&w=1280&q=75');
   background-position: center;
